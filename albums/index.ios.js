@@ -4,7 +4,7 @@
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
 import Header from './src/components/header'; //if it's a js file we do not have to put js at the end
-import AlbumList from './src/components/AlbumList';
+import AlbumList from './src/components/albumList';
 
 //create a component, which is a js function that returns some aount of JSX. 
 // React Native is taking the component and render it to the screen.
@@ -28,6 +28,21 @@ AppRegistry.registerComponent('albums', () => App);
 
 // to render the components on screen:
 // react-native run-ios command on terminal
+
+// in order to get the list of albums to pass that data to AlbumList component,
+//it's needed to make a http request with react
+
+
+//functional components: functions that return some amount of JSX to be displayes on the mobile device
+//-used for presenting static data (data goes in, JSX comes out, only displaying soem content to the user)
+//- can't handle fetching data
+//- easy to write 
+
+//class based component: 
+//- used for dynamic source of data
+//- handles any data that might change (fetching data, user events, ...)
+//- knows when it gets erendered to the device (useful for data fetching)
+//- More code to write
 
 /**
  * Sample React Native App
