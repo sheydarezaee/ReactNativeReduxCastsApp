@@ -2,14 +2,15 @@
 
 //import a library to help create a component
 import React from 'react';
-import { Text, AppRegistry } from 'react-native';
+import { AppRegistry } from 'react-native';
+import Header from './src/components/header'; //if it's a js file we do not have to put js at the end
 
 //create a component, which is a js function that returns some aount of JSX. 
 // React Native is taking the component and render it to the screen.
 
 //always create one component per file
 const App = () => (
-  <Text>Some Text </Text>
+    <Header /> 
 );
 //render it to the device
 //first argument: albums is the project name, root directory,
