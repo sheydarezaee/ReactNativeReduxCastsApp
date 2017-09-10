@@ -6,14 +6,18 @@ import { Text, AppRegistry } from 'react-native';
 
 //create a component, which is a js function that returns some aount of JSX. 
 // React Native is taking the component and render it to the screen.
+
+//always create one component per file
 const App = () => (
-  <Text>Some Text Janeeeeeee ariiiiii</Text>
+  <Text>Some Text </Text>
 );
 //render it to the device
 //first argument: albums is the project name, root directory,
  // when we used react-native init command line in terminal
 //second argument: a function that returns the first component to render for the application 
 //for every react native application, we must register at least one react component
+
+//only the root component uses AppRegistry
 AppRegistry.registerComponent('albums', () => App);
 
 
