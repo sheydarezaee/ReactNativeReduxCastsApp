@@ -1,9 +1,31 @@
+//Place code here for ios, if you write code on Mac and running ios simulator!!!
+
+//import a library to help create a component
+import React from 'react';
+import { Text, AppRegistry } from 'react-native';
+
+//create a component, which is a js function that returns some aount of JSX. 
+// React Native is taking the component and render it to the screen.
+const App = () => (
+  <Text>Some Text Janeeeeeee ariiiiii</Text>
+);
+//render it to the device
+//first argument: albums is the project name, root directory,
+ // when we used react-native init command line in terminal
+//second argument: a function that returns the first component to render for the application 
+//for every react native application, we must register at least one react component
+AppRegistry.registerComponent('albums', () => App);
+
+
+// to render the components on screen:
+// react-native run-ios command on terminal
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
  * @flow
  */
-
+/*
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -51,3 +73,5 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('albums', () => albums);
+
+*/

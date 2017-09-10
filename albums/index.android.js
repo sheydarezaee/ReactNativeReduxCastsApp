@@ -1,3 +1,5 @@
+//place code in here for androis, if you write code on windows and running andrios simulator!!
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
