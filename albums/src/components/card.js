@@ -1,9 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const Card = () => {
+const Card = (props) => {
+  console.log('props.children', props.children);
   return (
     <View style={styles.containerStyle}>
+      {props.children} 
     </View>
   );
 };
@@ -25,4 +27,5 @@ const styles = {
   }
 };
 
+//if we pass one component to the other, it shows up as props.children to the parent component
 export default Card;

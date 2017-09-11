@@ -1,26 +1,18 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { Text, Image } from 'react-native';
+import Card from './card';
+import CardSection from './CardSection';
 
 const AlbumDetail = (props) => {
   console.log(props.album);
   return(
-    <View>
+    <Card>
 
-      <View>
-      	<Image source={props.album.image}/>
-      	<Text>{props.album.title}</Text>
-      	<Text>{props.album.artist}</Text>
-      </View>
-
-      <View>
-        <Image />
-      </View>
-
-      <View>
-        <Button />
-      </View>
-
-    </View>
+      <CardSection>
+        <Text>{props.album.title}</Text>
+      </CardSection>
+      
+    </Card>
   );
 };
 
