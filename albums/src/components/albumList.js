@@ -68,4 +68,6 @@ export default AlbumList;
 //state is for component's internal record keeping, to update data 
 // only use state with class based components
 
+//whenever you have ScrollView, you must add a style property of flex: 1 to your root element, 
+// whichi is in index.ios.js
 

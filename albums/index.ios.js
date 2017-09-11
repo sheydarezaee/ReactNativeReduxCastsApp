@@ -10,8 +10,10 @@ import AlbumList from './src/components/albumList';
 // React Native is taking the component and render it to the screen.
 
 //always create one component per file
+//add style property of flex: 1 to make ScrollView better working
+//what flex: 1 does is to expand this component to fill the entire content of the area of the device
 const App = () => (
-  <View>
+  <View style={{ flex: 1 }}>
     <Header headerText={'Albums'}/> 
     <AlbumList />
   </View>

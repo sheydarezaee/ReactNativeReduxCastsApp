@@ -2,19 +2,19 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './card';
 import CardSection from './cardSection';
+import Button from './button'
 
 const AlbumDetail = ({ album }) => {
-
-  const {title, artist, thumbnail_image, image} = album; //yay destructuring
+  const { title, artist, thumbnail_image, image } = album; //yay destructuring
   const { 
-  	headerContentStyle,
-  	thumbnailStyle,
-  	thumbnailContainerStyle,
-  	headerTextStyle,
-  	imageStyle
+    headerContentStyle,
+    thumbnailStyle,
+    thumbnailContainerStyle,
+    headerTextStyle,
+    imageStyle
   } = styles;
 
-  return(
+  return (
     <Card>
 
       <CardSection>
@@ -33,9 +33,13 @@ const AlbumDetail = ({ album }) => {
 
       <CardSection>
         <Image 
-          source={{ uri: image}}
+          source={{ uri: image }}
           style={imageStyle}
         />
+      </CardSection>
+
+      <CardSection>
+        <Button />
       </CardSection>
 
     </Card>
@@ -61,9 +65,9 @@ const styles = {
     marginLeft: 10
   },
   imageStyle: {
-  	height: 300,
-  	flex: 1, //gives full width from left to right
-  	width: null // and set width to null, weird
+    height: 300,
+    flex: 1, //gives full width from left to right
+    width: null // and set width to null, weird
   }
 };
 
@@ -77,7 +81,8 @@ export default AlbumDetail;
 
 
 //whenever we have multiple refereneces to props object, like here , we have three
-//props.album, it's a good time to destructure that property out of the argument of props ex. line 6 here
+//props.album, it's a good time to destructure that property out of the argument of 
+// props ex. line 6 here
 
 
 //react-native images will bot expand to fill the space by default,
@@ -92,8 +97,3 @@ export default AlbumDetail;
 //here the content to be scrollable is AlbumList
 //second, import a react- native component called ScrollView and wrap our content with 
 // (checkout albumList.js)
-
-
-
-
-
