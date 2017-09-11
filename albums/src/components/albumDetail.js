@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './card';
 import CardSection from './cardSection';
 import Button from './button'
 
 const AlbumDetail = ({ album }) => {
-  const { title, artist, thumbnail_image, image } = album; //yay destructuring
+  const { title, artist, thumbnail_image, image, url } = album; //yay destructuring
   const { 
     headerContentStyle,
     thumbnailStyle,
@@ -39,7 +39,7 @@ const AlbumDetail = ({ album }) => {
       </CardSection>
 
       <CardSection>
-        <Button onPress={() => console.log(title)}/>
+        <Button onPress={() => Linking.openURL(url)} />
       </CardSection>
 
     </Card>
@@ -97,3 +97,9 @@ export default AlbumDetail;
 //here the content to be scrollable is AlbumList
 //second, import a react- native component called ScrollView and wrap our content with 
 // (checkout albumList.js)
+
+//to link user to another web page or link from your app, use 
+// Linking library of react-native API section
+// which allows for any incomin or outgoing linking
+
+
