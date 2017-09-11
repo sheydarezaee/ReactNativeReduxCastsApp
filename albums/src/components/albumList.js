@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native'; //replave View tag with ScrollView
 import axios from 'axios';
 import AlbumDetail from './albumDetail'; 
 
@@ -23,12 +23,12 @@ class AlbumList extends Component {
       <AlbumDetail key={album.title} album={album} />
     );
   }
-  
+  //everything inside the View tag here needs to be set to scroll, so replace View with ScrollView
   render() {
     return (
-      <View>
-        {this.renderAlbums()}
-      </View>
+      <ScrollView>
+        {this.renderAlbums()} 
+      </ScrollView>
     );
   }
 }

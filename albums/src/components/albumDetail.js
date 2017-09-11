@@ -5,15 +5,20 @@ import CardSection from './cardSection';
 
 const AlbumDetail = ({ album }) => {
 
-  const {title, artist, thumbnail_image} = album; //yay destructuring
-  const { headerContentStyle, thumbnailStyle} = styles;
-  
+  const {title, artist, thumbnail_image, image} = album; //yay destructuring
+  const { 
+  	headerContentStyle,
+  	thumbnailStyle,
+  	thumbnailContainerStyle,
+  	headerTextStyle,
+  	imageStyle
+  } = styles;
+
   return(
     <Card>
 
       <CardSection>
-
-        <View>
+        <View style={thumbnailContainerStyle}>
           <Image 
             source={{ uri: thumbnail_image }}
             style={thumbnailStyle} 
@@ -21,10 +26,16 @@ const AlbumDetail = ({ album }) => {
         </View>
 
         <View style={headerContentStyle}>
-          <Text>{title}</Text>
+          <Text style={headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
         </View>
+      </CardSection>
 
+      <CardSection>
+        <Image 
+          source={{ uri: image}}
+          style={imageStyle}
+        />
       </CardSection>
 
     </Card>
@@ -36,9 +47,23 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-around'
   },
+  headerTextStyle: {
+    fontSize: 18
+  },
   thumbnailStyle: {
     height: 50,
     width: 50
+  },
+  thumbnailContainerStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10,
+    marginLeft: 10
+  },
+  imageStyle: {
+  	height: 300,
+  	flex: 1, //gives full width from left to right
+  	width: null // and set width to null, weird
   }
 };
 
@@ -58,4 +83,17 @@ export default AlbumDetail;
 //react-native images will bot expand to fill the space by default,
 // instead we have to manually adding a styling rule that tells the image tag
 // height and width ,... to be able to render that image on the page
-//and dont forget 
+//make sure to syle any image, set height and width to see the image on screen, otehrwise, no see
+
+//scrolling with react-native:
+//doesnt do that by default, to scroll:
+//first, identify the JSX tags that we expect to be scrollable,
+// like the bulk section of content that we want to be scrollable
+//here the content to be scrollable is AlbumList
+//second, import a react- native component called ScrollView and wrap our content with 
+// (checkout albumList.js)
+
+
+
+
+
