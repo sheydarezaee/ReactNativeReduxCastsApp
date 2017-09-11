@@ -15,6 +15,7 @@ to run application on ios:
 - react-native run-ios
   (this will build our project and launch the ios simulator and show it) 
 
+/////////////////////////////////////////////////////////
 set-up eslint:
 * editor specific settings: install linter and then eslint which is parsing JS code, and creates and shows errors to the user accordingly, you install these two one time and it works for all projects
 * project specific settings/ configuration:
@@ -43,5 +44,26 @@ and paste it to the sublime console, meaning click view on the top, and click sh
  SublimeLinter ---> this was not found
  SublimeLinter-contrib-eslint ----> this was not found neither
 
- 
+ all set! in other projects, just run these two, cuz the general setting is done:
+- npm install --save-dev eslint-config-rallycoding
+- add .eslintrc file and type in it:
+   {
+     "extends": "rallycoding"
+   }
 
+///////////////////////////////////////////////////////////
+alittle about what was set up with reactNative:
+-no need to work with ios or andriod folders, they are just there for the setup
+- we work with index-anroid-js and inex.ios.js files and anything we add to the insitial files
+these two files serve as entry points to our application
+if the simulator is open for ios, you put all your stuff on index.ios.js, and liekwise on android side
+
+ /////////////////////////
+ first app:
+ display to the user a number of different records that they can purchase
+decsions about making components are to make them with the most reusability potential ..
+
+ -header component
+ -card component ---> each card component has few card sections in it
+
+///////////////////////////
