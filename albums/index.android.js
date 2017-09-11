@@ -53,3 +53,5 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('albums', () => albums);
+
+//index.android.js
